@@ -1,0 +1,15 @@
+<%- include('../../partials/header-dashboard'); -%>
+<h1>All Categories</h1>
+
+
+<form action="/category/new" method="POST">
+    <label>Enter Category Name</label>
+    <input type="text" name="name" placeholder="E.g Music, Love">
+    <input type="submit" value="Add Category">
+</form>
+
+<div>
+    <h2>All Categories</h2>
+
+</div>
+<%- include('../../partials/footer-dashboard'); -%>

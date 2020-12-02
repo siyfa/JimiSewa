@@ -1,0 +1,18 @@
+<h1>Edit <%= book.title %></h1>
+<form action="/book/<%= book._id %>?_method=PUT" method="POST">
+  <label>Title</label>
+  <input type="text" name="book[title]" value="<%= book.title %>" /><br />
+  <label>Image</label>
+  <input type="text" name="book[image]" value="<%= book.image %>" /><br />
+  <label>Image Description</label>
+  <input
+    type="text"
+    name="book[imageDesc]"
+    value="<%= book.imageDesc %>"
+  /><br />
+  <label>Link</label>
+  <input type="text" name="book[link]" value="<%= book.link %>" /><br />
+  <label>Book Review</label>
+  <textarea name="book[review]"><%= book.review %></textarea>
+  <button>Edit</button>
+</form>

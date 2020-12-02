@@ -1,0 +1,34 @@
+<%- include('../partials/header-dashboard'); -%>
+<h3>Create New Post</h3>
+<form id="newpost" action="/blog/newpost" method="POST">
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <label>Image Url</label>
+    <input type="url" name="image" placeholder="Image Url">
+  </div>
+  <div class="form-group">
+    <label>Image Description</label>
+    <input type="text" name="imageDesc" placeholder="short description">
+  </div>
+  <div class="form-group">
+    <label>Category</label>
+    <input list="categories" name="category" placeholder="Select Category">
+    <datalist id="categories">
+      <% categories.forEach(function(category) {%>
+      <option value="<%=category.name %>"></option>
+      <%})%>
+    </datalist>
+  </div>
+  <div class="form-group">
+    <label>Content</label>
+    <textarea id="summernote" name="body"></textarea>
+  </div>
+  <div class="form-group">
+    <input class="btn btn-lg btn-success" type="submit">
+  </div>
+</form>
+
+<%- include('../partials/footer-dashboard'); -%>

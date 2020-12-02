@@ -1,0 +1,15 @@
+<h1>Books Page</h1>
+
+<div class="container">
+  <% book.forEach(function(book){ %>
+  <div>
+    <h3><%= book.title %></h3>
+    <img src="<%= book.image %>" /> <%= book.image %>
+    <div class="details">
+      <h6 class="tag"><%= book.link %></h6>
+      <span class="ml-2 p-1"><%= book.createdAt %></span>
+    </div>
+    <a href="/book/<%= book.id %>">Go to </a>
+  </div>
+  <% }) %>
+</div>

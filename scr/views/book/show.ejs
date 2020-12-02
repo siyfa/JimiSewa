@@ -1,0 +1,11 @@
+<h1>Show Book Page</h1>
+<div>
+  <h1><%= book.title %></h1>
+  <img src="<%= book.image %>" />
+  <span><%= book.imageDesc %></span>
+  <p><%= book.review %></p>
+</div>
+<a href="/admin/dashboard/<%= book._id %>/editbook">Edit book</a>
+<form action="/book/<%= book._id %>?_method=DELETE" method="POST">
+  <button>Delete Book</button>
+</form>

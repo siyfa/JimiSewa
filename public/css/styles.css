@@ -1,0 +1,236 @@
+.banner {
+  text-align: center;
+  position: relative;
+  color: black;
+  max-width: 100%;
+  overflow: auto;
+}
+.banner img {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  margin: 0;
+  font-size: 50px;
+  min-width: 100%;
+}
+
+/* ------------ Admin Dashboard Style ----------------- */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+
+#dash p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+#dash a,
+#dash a:hover,
+#dash a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#dash .navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#dash .navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+#dash .line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#dash .wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#dash #sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #290129;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#dash #sidebar.active {
+  margin-left: -250px;
+}
+
+#dash #sidebar .sidebar-header {
+  padding: 20px;
+  background: #5f045f;
+}
+
+#dash #sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #290129;
+}
+
+#dash #sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#dash #sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#dash #sidebar ul li a:hover {
+  color: #290129;
+  background: #fff;
+}
+
+#dash #sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #290129;
+}
+
+#dash a[data-toggle="collapse"] {
+  position: relative;
+}
+
+#dash .dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#dash ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #5a055a;
+}
+
+#dash ul.CTAs {
+  padding: 20px;
+}
+
+#dash ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+#dash a.download {
+  background: #fff;
+  color: #290129;
+}
+
+#dash a.article,
+#dash a.article:hover {
+  background: #0f000f !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#dash #content {
+  width: calc(100% - 250px);
+  padding: 40px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#dash #content.active {
+  width: 100%;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #dash #sidebar {
+    margin-left: -250px;
+  }
+  #dash #sidebar.active {
+    margin-left: 0;
+  }
+  #dash #content {
+    width: 100%;
+  }
+  #dash #content.active {
+    width: calc(100% - 250px);
+  }
+  #dash #sidebarCollapse span {
+    display: none;
+  }
+}
+/* ----------- New Post Form --------------- */
+
+#newPost h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+
+#newPost .form-group label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#newPost .form-group input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding: 5px;
+  color: #303030;
+}
+
+#newPost .form-group .btn {
+  height: 100%;
+  padding: 10px;
+  border: none;
+}
